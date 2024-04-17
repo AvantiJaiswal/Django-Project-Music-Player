@@ -1,0 +1,181 @@
+{
+    "css": "base1.css",
+    "legend": "Player Details",
+    "HTML_fields": [
+        {
+            "tag": "input",
+            "type": "text",
+            "class": "form-control",
+            "label": "Song name",
+            "id": "song_name",
+            "name": "song_name",
+            "maxlength": "100",
+            "required": "true",
+            "placeholder": "Enter song name"
+        },
+        {
+            "tag": "select",
+            "type": "NA",
+            "class": "form-control",
+            "label": "Genre",
+            "id": "genre",
+            "name": "genre",
+            "options": {
+                "A": "A1",
+                "B": "B1"
+            },
+            "required": "true"
+        },
+        {
+            "tag": "input",
+            "type": "checkbox",
+            "class": "form-control",
+            "label": "Favourite",
+            "id": "favourite",
+            "name": "favourite",
+            "label1":{
+                "A1":"A1"
+            }
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "class": "form-control",
+            "label": "Album name",
+            "id": "album_name",
+            "name": "album_name",
+            "maxlength": "100",
+            "required": "true",
+            "placeholder": "Enter album name"
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "class": "form-control",
+            "label": "Artist name",
+            "id": "artist_name",
+            "name": "artist_name",
+            "maxlength": "100",
+            "required": "true",
+            "placeholder": "Enter artist name"
+        },
+        {
+            "tag": "input",
+            "type": "number",
+            "class": "form-control",
+            "label": "Year of Release",
+            "id": "year_of_release",
+            "name": "year_of_release",
+            "required": "true"
+        },
+        {
+            "tag": "input",
+            "type": "file",
+            "class": "form-control",
+            "label": "Audio",
+            "id": "audio",
+            "name": "audio",
+            "required": "true"
+        },
+        {
+            "tag": "button",
+            "type": "submit",
+            "class": "form-control",
+            "label": "Submit",
+            "id": "submit",
+            "name": "submit"
+        }
+    ],
+    "HTML_table": {
+        "headers": [
+            "Song name",
+            "Genre",
+            "Album name",
+            "Artist name",
+            "Year of Release",
+            "Audio"
+        ],
+        "values": [
+            {
+                "name": "song_name",
+                "type": "text"
+            },
+            {
+                "name": "genre",
+                "type": "text"
+            },
+            {
+                "name": "album_name",
+                "type": "text"
+            },
+            {
+                "name": "artist_name",
+                "type": "text"
+            },
+            {
+                "name": "year_of_release",
+                "type": "text"
+            },
+            {
+                "name": "audio",
+                "type": "file"
+            }
+        ],
+        "searchable_fields": [
+            "song_name",
+            "genre",
+            "album_name",
+            "artist_name",
+            "year_of_release",
+            "audio"
+        ]
+    },
+    "Model_fields": {
+        "tableName": "Song",
+        "tableFields": [
+            {
+                "type": "CharField",
+                "name": "song_name",
+                "isBlank": "True",
+                "isNull": "True",
+                "maxLength": "100"
+            },
+            {
+                "type": "CharField",
+                "name": "genre",
+                "isBlank": "True",
+                "isNull": "True",
+                "maxLength": "100"
+            },
+            {
+                "type": "CharField",
+                "name": "album_name",
+                "isBlank": "True",
+                "isNull": "True",
+                "maxLength": "100"
+            },
+            {
+                "type": "CharField",
+                "name": "artist_name",
+                "isBlank": "True",
+                "isNull": "True",
+                "maxLength": "100"
+            },
+            {
+                "type": "IntegerField",
+                "name": "year_of_release",
+                "isBlank": "True",
+                "isNull": "True",
+                "maxLength": "100",
+                "default": "0"
+            },
+            {
+                "type": "FileField",
+                "name": "audio",
+                "isBlank": "True",
+                "isNull": "True",
+                "filePath": "attachment"
+            }
+        ]
+    }
+}

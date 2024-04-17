@@ -1,0 +1,77 @@
+{
+    "css": "base1.css",
+    "legend": "Player Details",
+    "HTML_fields": [
+        {
+            "tag": "input",
+            "type": "text",
+            "class": "form-control",
+            "label": "Playlists Name",
+            "id": "playlists_name",
+            "name": "playlists_name",
+            "maxlength": "100",
+            "required": "true",
+            "placeholder": "Enter playlists name"
+        },
+        {
+            "tag": "select",
+            "type": "NA",
+            "class": "form-control",
+            "label": "Song Name",
+            "id": "song_name",
+            "name": "song_name",
+            "options": {
+                "A": "A1",
+                "B": "B1"
+            },
+            "required": "true"
+        },
+        {
+            "tag": "button",
+            "type": "submit",
+            "class": "form-control",
+            "label": "Submit",
+            "id": "submit",
+            "name": "submit"
+        }
+    ],
+    "HTML_table": {
+        "headers": [
+            "Playlists Name",
+            "Song"
+        ],
+        "values": [
+            {
+                "name": "playlists_name",
+                "type": "text"
+            },
+            {
+                "name": "song_name",
+                "type": "text"
+            }
+        ],
+        "searchable_fields": [
+            "playlists_name",
+            "song_name"
+        ]
+    },
+    "Model_fields": {
+        "tableName": "Playlists",
+        "tableFields": [
+            {
+                "type": "CharField",
+                "name": "playlists_name",
+                "isBlank": "True",
+                "isNull": "True",
+                "maxLength": "100"
+            },
+            {
+                "type": "CharField",
+                "name": "song_name",
+                "isBlank": "True",
+                "isNull": "True",
+                "maxLength": "100"
+            }
+        ]
+    }
+}
