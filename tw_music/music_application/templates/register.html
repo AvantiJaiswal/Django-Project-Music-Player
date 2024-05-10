@@ -1,0 +1,104 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zxx" class="js">
+
+<head>
+    <base href="../../../">
+    <meta charset="utf-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
+    <!-- Page Title  -->
+    <title>Registration</title>
+   <!-- StyleSheets  -->
+   <link rel="stylesheet" href="{% static 'assets/css/dashlite.css' %}">
+   <link id="skin-default" rel="stylesheet" href="{% static 'assets/css/theme.css' %}">
+</head>
+
+<body class="nk-body ui-rounder npc-general pg-auth">
+    <div class="nk-app-root">
+        <!-- main @s -->
+        <div class="nk-main ">
+            <!-- wrap @s -->
+            <div class="nk-wrap nk-wrap-nosidebar">
+                <!-- content @s -->
+                <div class="nk-content ">
+                    <div class="nk-split nk-split-page nk-split-lg">
+                        <div class="nk-split-content nk-block-area nk-block-area-column nk-auth-container bg-white w-lg-45">
+                            <div class="absolute-top-right d-lg-none p-3 p-sm-5">
+                                <a href="#" class="toggle btn btn-white btn-icon btn-light" data-target="athPromo"><em class="icon ni ni-info"></em></a>
+                            </div>
+                            <div class="nk-block nk-block-middle nk-auth-body">
+                                <div class="nk-block-head">
+                                    <div class="nk-block-head-content">
+                                        <h5 class="nk-block-title">Register</h5>
+                                    </div>
+                                </div><!-- .nk-block-head -->
+                                <form action="{% url 'login' %}">
+                                    <div class="form-group">
+                                        <label class="form-label" for="name">Name</label>
+                                        <div class="form-control-wrap">
+                                            <input type="text" class="form-control form-control-lg" id="name" placeholder="Enter your name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="email">Email</label>
+                                        <div class="form-control-wrap">
+                                            <input type="text" class="form-control form-control-lg" id="email" placeholder="Enter your email address or username">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="password1">Password</label>
+                                        <div class="form-control-wrap">
+                                            <a tabindex="-1" href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
+                                            </a>
+                                            <input type="password" class="form-control form-control-lg" id="password" placeholder="Enter your passcode">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="password2">Confirm Password</label>
+                                        <div class="form-control-wrap">
+                                            <a tabindex="-1" href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
+                                            </a>
+                                            <input type="password" class="form-control form-control-lg" id="password" placeholder="Enter your passcode">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-lg btn-primary btn-block">Register</button>
+                                    </div>
+                                </form><!-- form -->
+                            </div><!-- .nk-block -->
+                        </div><!-- nk-split-content -->
+                        <div class="nk-split-content nk-split-stretch bg-lighter d-flex toggle-break-lg toggle-slide toggle-slide-right" data-toggle-body="true" data-content="athPromo" data-toggle-screen="lg" data-toggle-overlay="true">
+                            <div class="slider-wrap w-100 w-max-550px p-3 p-sm-5 m-auto">
+                                <div class="slider-init" data-slick='{"dots":true, "arrows":false}'>
+                                    <div class="slider-item">
+                                        <div class="nk-feature nk-feature-center">
+                                            <div class="nk-feature-img">
+                                                <img class="round" src="./static/assets/images/slides/promo.png" srcset="./static/assets/images/slides/promo.png" alt="">
+                                            </div>
+                                            <div class="nk-feature-content py-4 p-sm-5">
+                                                <p>You can start to add your songs easily with our user-friendly design.</p>
+                                            </div>
+                                        </div>
+                                    </div><!-- .slider-item -->
+                                </div><!-- .slider-init -->
+                                <div class="slider-dots"></div>
+                                <div class="slider-arrows"></div>
+                            </div><!-- .slider-wrap -->
+                        </div><!-- nk-split-content -->
+                    </div><!-- nk-split -->
+                </div>
+                <!-- wrap @e -->
+            </div>
+            <!-- content @e -->
+        </div>
+        <!-- main @e -->
+    </div>
+    <!-- app-root @e -->
+    <!-- JavaScript -->
+     <script src="{% static 'assets/js/bundle.js' %}"></script>
+    <script src="{% static 'assets/js/scripts.js' %}"></script>
+
+</html>

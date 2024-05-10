@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+ <!-- content @s -->
+ <div class="nk-content ">
+	<div class="container-fluid">
+		<div class="nk-content-inner">
+			<div class="nk-content-body">
+				<div class="components-preview wide-md mx-auto">
+					<div class="nk-block-head nk-block-head-lg wide-sm">
+						<div class="nk-block-head-content">
+							<div class="nk-block-head-sub"><a class="back-to" href="{% url 'playlists' %}"><em class="icon ni ni-arrow-left"></em><span>Back</span></a></div>
+							<h2 class="nk-block-title fw-normal">Add Song</h2>
+						</div>
+					</div><!-- .nk-block-head -->
+					<div class="nk-block nk-block-lg">
+						<div class="card card-bordered">
+							<form action="{% url 'song' %}" method="post" class="nk-stepper stepper-init is-alter nk-stepper-s1" id="stepper-create-project" enctype="multipart/form-data">
+                                {% csrf_token %}
+								<div class="row g-0 col-sep col-sep-md col-sep-xl">
+									<div class="col-md-4 col-xl-4">
+										<div class="card-inner">
+											<ul class="nk-stepper-nav nk-stepper-nav-s1 stepper-nav is-vr">
+												<li>
+													<div class="step-item">
+														<div class="step-text">
+															<div class="lead-text">Song Details</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="step-item">
+														<div class="step-text">
+															<div class="lead-text">Album Details</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="step-item">
+														<div class="step-text">
+															<div class="lead-text">Audio file</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="step-item">
+														<div class="step-text">
+															<div class="lead-text">Completed</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-md-8 col-xl-8">
+										<div class="card-inner">
+											<div class="nk-stepper-content">
+												<div class="nk-stepper-steps stepper-steps">
+
+													<div class="nk-stepper-step">
+														<h5 class="title mb-3">Song Details</h5>
+														<div class="row g-3">
+
+															<div class="col-xxl-3 col-md-6">
+																<div class="form-group">
+																	<label for="song_name" class="form-label"> Name </label>
+																	
+																	<span style="color:red;">*</span>
+																	  
+																	  <div class="form-control-wrap">
+																		  <input type="text" class="form-control" id="song_name" name="song_name" value=""  placeholder="Enter name"     required   >
+																	  </div>	
+																  </div>
+															</div><!--col-->
+															<div class="col-xxl-3 col-md-6">
+																<div class="form-group">
+																	<label for="genre" class="form-label"> Genre </label>
+																	
+																		<span style="color:red;">*</span>
+																	  
+																	  <div class="form-control-wrap">
+																		  <select class="form-select" name="genre" class="form-control"  required     >
+																		  
+																			<option>--select--</option>
+																			  
+																				  <option value="Hip Hop">Hip Hop</option>
+																			  
+																				  <option value="Indian Pop">Indian Pop</option>
+
+                                                                                  <option value="Indian Music">Indian Music</option>
+																			  
+																			
+																		</select>
+																	</div>
+																</div>	
+															</div><!--col-->
+                                                            <div class="col-12">
+                                                                <div class="form-group">
+                                                                    <label class="form-label">Is this one of your favourites ?</label>
+                                                                    <div class="form-control-wrap">
+                                                                        <ul class="custom-control-group gx-4">
+                                                                            <li>
+                                                                                <div class="custom-control custom-control-sm custom-checkbox">
+                                                                                    <input type="checkbox" class="custom-control-input" name="cp1-follow-project" id="cp1-follow-project" value="follow_project">
+                                                                                    <label class="custom-control-label" for="cp1-follow-project">Favourite</label>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+														</div>
+													</div>
+													<div class="nk-stepper-step">
+														<h5 class="title mb-4">Album Details</h5>
+														<ul class="row g-3">
+
+															<div class="col-xxl-3 col-md-6">
+																<div class="form-group">
+																	<label for="album_name" class="form-label"> Album name: </label>
+																	
+																	<span style="color:red;">*</span>
+																		
+																		<div class="form-control-wrap">
+																			<input type="text" class="form-control" id="album_name" name="album_name" value=""  placeholder="Enter album name"     required   >
+																		</div>	
+																	</div>
+															</div><!--col-->
+
+															<div class="col-xxl-3 col-md-6">
+																<div class="form-group">
+																	<label for="artist_name" class="form-label"> Artist name </label>
+																	
+																	<span style="color:red;">*</span>
+																		
+																		<div class="form-control-wrap">
+																			<input type="text" class="form-control" id="artist_name" name="artist_name" value=""  placeholder="Enter artist name"     required   >
+																		</div>	
+																	</div>
+															</div><!--col-->
+
+															<div class="col-xxl-3 col-md-6">
+																<div class="form-group">
+																	<label for="year_of_release" class="form-label"> Year of release </label>
+																	
+																	<span style="color:red;">*</span>
+																				
+																	<div class="form-control-wrap">
+																		<input type="number" class="form-control" id="year_of_release" name="year_of_release"     required  
+																			
+																		>
+																	</div>	
+																</div>    
+															</div><!--col-->
+														</ul>
+													</div>
+													<div class="nk-stepper-step">
+														<h5 class="title mb-4">Audio file</h5>
+														<ul class="row g-3">
+
+															<div class="col-xxl-3 col-md-6">
+																<div class="form-group">
+																	<label for="audio" class="form-label"> Audio </label>
+																	
+																	<span style="color:red;">*</span>
+																		
+																		<div class="form-control-wrap">
+																		<input type="file" class="form-control" id="audio" name="audio"    required    >
+																		</div>
+																	</div>
+																</div><!--col-->
+
+														</ul>
+													</div>
+
+													<div class="nk-stepper-step text-center">
+														<h5 class="title mb-2">Successfully added!</h5>
+													</div>
+												</div>
+												<ul class="nk-stepper-pagination pt-4 gx-4 gy-2 stepper-pagination">
+													<li class="step-prev"><button class="btn btn-dim btn-primary">Prev</button></li>
+													<li class="step-next"><button class="btn btn-primary">Next</button></li>
+													<li class="step-submit">
+                                                        <input class="btn btn-primary form-group form-control" type="submit" name="action" value="Submit"></input>
+                                                    </li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div><!-- .nk-block -->
+				</div><!-- .components-preview -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- content @e -->
+
+{% endblock content %}
